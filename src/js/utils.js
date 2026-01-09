@@ -5,6 +5,5 @@ function getRandomIntInclusive(min, max) {
 }
 
 function moveElement(grid, element, newPosition) {
-    element.remove();
     grid.rows[newPosition[0]].cells[newPosition[1]].appendChild(element);
 }

@@ -1,6 +1,7 @@
 function createGrid() {
     let grid = document.createElement('table')
-    grid.style.border = "1px solid black";
+    grid.style.border = "2px solid black";
+    grid.style.borderCollapse = "collapse";
 
     for (let i = 0; i < gridSize[0]; i++) {
         let row = grid.insertRow();
@@ -9,6 +10,7 @@ function createGrid() {
             cell.style.width = "50px";
             cell.style.height = "50px";
             cell.style.border = "1px solid black";
+            cell.style.fontSize = "0px";
         }
     }
     document.body.appendChild(grid);
