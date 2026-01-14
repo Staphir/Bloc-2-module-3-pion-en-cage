@@ -2,16 +2,16 @@ function initPawn() {
     let pawn = new Image(pawnSize[0], pawnSize[1]);
     pawn.src = pawnSrc;
 
-    let pawPosition = [getRandomIntInclusive(0, gridSize[0] - 1), getRandomIntInclusive(0, gridSize[1] - 1)]
-    let pawnGridCell = grid.rows[pawPosition[0]].cells[pawPosition[1]];
+    pawnPosition = [getRandomIntInclusive(0, gridSize[0] - 1), getRandomIntInclusive(0, gridSize[1] - 1)]
+    let pawnGridCell = grid.rows[pawnPosition[0]].cells[pawnPosition[1]];
     pawnGridCell.appendChild(pawn);
 
-    initPawnMovement(pawPosition);
+    initPawnMovement();
 
     return pawn;
 }
 
-function initPawnMovement(pawnPosition) {
+function initPawnMovement() {
     document.onkeydown = function (e) {
         switch (e.key) {
             case "ArrowUp":
