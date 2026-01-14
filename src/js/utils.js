@@ -6,9 +6,5 @@ function getRandomIntInclusive(min, max) {
 
 function moveElement(grid, element, newPosition) {
     grid.rows[newPosition[0]].cells[newPosition[1]].appendChild(element);
-    element
-}
-
-function isSamePosition(position1, position2) {
-    return position1[0] === position2[0] && position1[1] === position2[1];
+    checkEndGame(pawnPosition, bonusPosition);
 }
